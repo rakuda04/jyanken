@@ -8,7 +8,7 @@ function getComputerChoice() {
   }
 
   const computerChoice = getComputerChoice();
-  const playerChoice = prompt("じゃんけんぽん！").toLowerCase(); //change this into key input
+  const playerChoice = //prompt("じゃんけんぽん！").toLowerCase(); change this into key input
 
   function Round(userChoice, computerChoice) {
     const winningCombinations = {
