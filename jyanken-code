@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけん</title>
+</head>
+<body>
+  <h1>じゃんけん大会へようこそ！</h1>
+  
+  <script>
+    // Your JavaScript code goes here
+
+    function getComputerChoice() {
+      const GAME_OPTIONS = {
+        1: 'rock',
+        2: 'paper',
+        3: 'scissors',
+      };
+      
+      // Generate a random number between 1 and 3 (inclusive)
+      const randomNumber = Math.floor(Math.random() * 3) + 1;
+      
+      // Get the corresponding string for the random number from the GAME_OPTIONS object
+      const randomChoice = GAME_OPTIONS[randomNumber];
+      
+      return randomChoice; // Return the random choice instead of console.log
+    }
+
+    // Call the function to get the random choice and store it in a variable
+    const computerChoice = getComputerChoice();
+    const playerChoice = prompt("じゃんけんぽん！");
+
+    function Round(userChoice, computerChoice) {
+      userChoice = userChoice.toLowerCase();
+
+      if (userChoice === 'paper' && computerChoice === 'rock') {
+        console.log("Player's paper wins!");                      
+      } else if (userChoice === 'rock' && computerChoice === 'scissors') {
+        console.log("Player's rock wins!");                      
+      } else if (userChoice === 'scissors' && computerChoice === 'paper') {
+        console.log("Player's scissors wins!");
+      } else if (userChoice === 'rock' && computerChoice === 'paper') {
+        console.log("Computer's paper wins!");
+      } else if (userChoice === 'scissors' && computerChoice === 'rock') {
+        console.log("Computer's rock wins!");
+      } else if (userChoice === 'paper' && computerChoice === 'scissors') {
+        console.log("Computer's scissors wins!");
+      } else if (userChoice === computerChoice) {
+        console.log("Draw!");
+      }
+    }
+
+    Round(playerChoice, computerChoice);
+    
+  </script>
+</body>
+</html>
