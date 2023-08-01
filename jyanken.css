@@ -28,35 +28,73 @@ align-items: center;
 justify-content: center;
 display: flex;
 gap: 40px;
-
+margin-top: 60px;
 }
 
-.jknbutton,.btnguu,.btnpaa,.btncho{
 
+.btnguu,.btnpaa,.btnchoki{
+  background: none;
+  padding: 10px;
+  color: white;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #353535;
 }
 
-.btnguu{
-    /* Set the background image */
-    background-image: url("./イラスト/auto_lock_shimedashi_man.png");
-    /* Set the size and position of the background image */
-    background-size: cover;
-    background-position: center;
-    /* Set any desired padding or spacing around the text */
-    padding: 10px 20px;
-    /* Set any other desired styles for the button */
-    color: white;
-    background-color: #007bff;
-    border-radius: 15px 30px;
+.btnguu img,
+.btnpaa img,
+.btnchoki img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.jknbutton{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+
+/* add text fonts */
+.text{
+    padding: 1rem 3rem;
     cursor: pointer;
-    /* Add any other styles as needed */
+    border-radius: 10px;
+    border: 3px solid #353535;
+    box-shadow: 0px 5px #353535;
+    transition: .3s;
+    color: #333;
+    font-weight: bold;
 }
 
-.btnk{
-
+.text:hover {
+    box-shadow: 0px 10px #353535;
+    transform: translateY(-5px);
 }
 
-.btnp{
+.text:active {
+    box-shadow: 0 0;
+    transform: translateY(5px);
+}
 
+
+#guutext{
+background-color: #4f8bca;
+}
+
+#paatext{
+    background-color: aliceblue;
+}
+
+#chokitext{
+background-color: #dbb872;
 }
 
 .resultcontainer{
