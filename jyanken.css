@@ -98,11 +98,19 @@ background-color: #dbb872;
 }
 
 .resultcontainer{
+display: flex;
+justify-content: center;
+align-items:center ;
 
 }
 
-#displayresult{
-     
+#displayResult{
+    
+        display: block;
+        font-family: aw;
+        white-space: pre;
+        margin: 1em 0;
+      
 }
 
 #playagainbutton{
