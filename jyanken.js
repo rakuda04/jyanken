@@ -1,56 +1,53 @@
-//move all logic here
+const btn = document.querySelectorAll('#guutext,#paatext,#chokitext');
+  
+btn.forEach(button => {
+  button.addEventListener('click', playRound);
+});
+
+function playRound(e) {
+  const playerChoice = getUserChoice(e);
+  const computerChoice = getComputerChoice();
+  Round(playerChoice, computerChoice);
+}
+
+function getUserChoice(e) {
+  const id = e.target.id;
+  
+  if (id === 'guutext') {
+    return 'rock';
+  }
+  else if (id === 'paatext') {
+    return 'paper';
+  }
+  else if (id === 'chokitext') {
+    return 'scissors';
+  }
+}
 
 function getComputerChoice() {
-    const GAME_OPTIONS = ['rock', 'paper', 'scissors'];
-    const randomNumber = Math.floor(Math.random() * 3);
-    const randomChoice = GAME_OPTIONS[randomNumber];
-    return randomChoice;
-  }
-
-  const computerChoice = getComputerChoice();
-  const playerChoice = //prompt("じゃんけんぽん！").toLowerCase(); change this into key input
-
-
-
-  function Round(userChoice, computerChoice) {
-    const winningCombinations = {
-      'paper': 'rock',
-      'rock': 'scissors',
-      'scissors': 'paper',
-    };
-
-    if (userChoice === computerChoice) {
-      displayResult('Draw!');
-    } else if (winningCombinations[userChoice] === computerChoice) {
-      displayResult('player wins!');
-    } else {
-      displayResult('computer wins!');
-    }
-  }
-
-  Round(playerChoice, computerChoice);
-
-const btn = document.querySelectorAll.btn.forEach('#guutext,#paatext,#chokitext');
-btn.addEventListener('click',getUserChoice(e)){
-return getUserChoice(e);
+  const GAME_OPTIONS = ['rock', 'paper', 'scissors'];
+  const randomNumber = Math.floor(Math.random() * 3);
+  const randomChoice = GAME_OPTIONS[randomNumber];
+  return randomChoice;
 }
 
-function getUserChoice(e.target.id){
-  if id == jyanken.getElementById('#guutext'){
-    return 'rock'
+function Round(userChoice, computerChoice) {
+  const winningCombinations = {
+    'paper': 'rock',
+    'rock': 'scissors',
+    'scissors': 'paper',
+  };
+
+  if (userChoice === computerChoice) {
+    displayResult('Draw!');
+  } else if (winningCombinations[userChoice] === computerChoice) {
+    displayResult('Player wins!');
+  } else {
+    displayResult('Computer wins!');
   }
-  else if id == jyanken.getElementById("#paatext"){
-    return 'paper'
-  }
-  else if id == jyanken.getElementById("#chokitext"){
-    return 'scissors'
-}
 }
 
-  function displayResult(result) {
-    let displayResult = document.getElementById('displayResult');
-    displayResult.innerText = result;
-  }
-  
-
-  
+function displayResult(result) {
+  let displayResult = document.getElementById('displayResult');
+  displayResult.innerText = result;
+}
