@@ -10,6 +10,8 @@ function getComputerChoice() {
   const computerChoice = getComputerChoice();
   const playerChoice = //prompt("じゃんけんぽん！").toLowerCase(); change this into key input
 
+
+
   function Round(userChoice, computerChoice) {
     const winningCombinations = {
       'paper': 'rock',
@@ -18,12 +20,37 @@ function getComputerChoice() {
     };
 
     if (userChoice === computerChoice) {
-      console.log("Draw!");
+      displayResult('Draw!');
     } else if (winningCombinations[userChoice] === computerChoice) {
-      console.log("Player wins!");
+      displayResult('player wins!');
     } else {
-      console.log("Computer wins!");
+      displayResult('computer wins!');
     }
   }
 
   Round(playerChoice, computerChoice);
+
+const btn = document.querySelectorAll.btn.forEach('#guutext,#paatext,#chokitext');
+btn.addEventListener('click',getUserChoice(e)){
+return getUserChoice(e);
+}
+
+function getUserChoice(e.target.id){
+  if id == jyanken.getElementById('#guutext'){
+    return 'rock'
+  }
+  else if id == jyanken.getElementById("#paatext"){
+    return 'paper'
+  }
+  else if id == jyanken.getElementById("#chokitext"){
+    return 'scissors'
+}
+}
+
+  function displayResult(result) {
+    let displayResult = document.getElementById('displayResult');
+    displayResult.innerText = result;
+  }
+  
+
+  

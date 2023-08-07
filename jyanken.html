@@ -12,16 +12,27 @@
   
   <div id ='heading'>\じゃんけん大会へようこそ！/</div>
   <!-- make the pictures clickable and the sub text examplingwhat it is  -->
+  <!-- scratch taht looks awkard make text function as button -->
 <div id="button_container">
-  <button class="btnguu"></button>
-  <p>グー</p>
-  <button class="btnpaa">パー</button>
-  <button class="btnchoki">チョキ</button>
+  <div class="jknbutton">
+    <img src="./イラスト/auto_lock_shimedashi_man.png" alt="guu" class="btnguu">
+  <button class="text" id="guutext">グー</button>
+</div>
+<div class="jknbutton">
+    <img src="./イラスト/saiban_woman_yuuzai.png" alt="paa" class="btnpaa">
+<button class="text" id="paatext">パー</button>
+</div>
+<div class="jknbutton">
+    <img src="./イラスト/shinkai_yeti_lobster.png" alt="choki" class="btnchoki">
+  <button class="text" id="chokitext">チョキ</button>
+</div>
 </div>
  <!-- what if i make the play button hidden until the result comes out then displays the score
 so like i put the display result box next to the play button and onces the game ends restart-->
- 
-<button id="playagainbutton">もう一回！</button> 
+ <div class="resultcontainer">
+<pre id="displayresult"></pre>
+  <button id="playagainbutton">もう一回！</button> 
+</div>
 
    
     
